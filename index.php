@@ -55,10 +55,10 @@ if(isset($_POST['nome'])){
     <main>
         
         <form action="" method="post">
-            <? print($msg); ?>
-            Nome<input type="text" name="nome" required><br>
-            Marca<input type="text" name="marca"required><br>
-            Estado<select name="estado" id="" required>
+            <?php if (!empty($msg)) echo "<div style='color: red;'>$msg</div>"; ?>
+            Nome<input type="text" name="nome" ><br>
+            Marca<input type="text" name="marca"><br>
+            Estado<select name="estado" id="" >
                 <option value="">------------</option>
                 <option value="N">Novo</option>
                 <option value="S">Seminovo</option>
@@ -66,9 +66,9 @@ if(isset($_POST['nome'])){
                 <option value="M">Muito usado</option>
                 <option value="Q">Quebrado</option>
             </select><br>
-            Preço<input type="number" name="preco" id="" required><br>
-            Quantidade<input type="number" name="quantidade" id="" required><br>
-            Entrada<select name="entrada" id="" required>
+            Preço<input type="number" name="preco" id="" ><br>
+            Quantidade<input type="number" name="quantidade" id="" ><br>
+            Entrada<select name="entrada" id="" >
                 <option value="">------------</option>
                 <option value="P">P10</option>
                 <option value="F">P2/P3</option>
@@ -77,7 +77,7 @@ if(isset($_POST['nome'])){
                 <option value="U">USB</option>
                 <option value="O">Outros</option>
             </select><br>
-            Link da imagem<input type="text" name="imagem" id="" required><br>
+            Link da imagem<input type="text" name="imagem" id="" ><br>
                 <button type="submit">Enviar</button>
                 <a href="instrumentos.php">Mostrar todos os instrumentos</a>
         </form>
