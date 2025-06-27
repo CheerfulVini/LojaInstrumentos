@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+#instrumentos {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas iguais */
+    gap: 20px;
+    justify-items: center;
+}
+
+.instrumento {
+    background-color: white;
+    border: 7px solid #1DCD9F;
+    border-radius: 20px;
+    padding: 10px;
+    width: 250px; /* largura desejada */
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    text-align: left;
+
+}
+
+.instrumento img {
+    width: 100%;
+    height: 50%;
+    object-fit: contain;
+}
+
+/* Botão voltar fora do grid */
+#botoes {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    border: 5px solid #169976;
+    border-radius: 10000px;
+    background-color: white;
+    cursor: pointer;
+}
